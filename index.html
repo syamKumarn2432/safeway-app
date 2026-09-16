@@ -1,8 +1,209 @@
-  <!DOCTYPE html>
-  <html>
-  <head><title>Safeway Home Healthcare</title></head>
-  <body style="font-family:sans-serif;text-align:center;padding-top:100px">
-    <h1>Safeway Home Healthcare</h1>
-    <p>Application coming soon.</p>
-  </body>
-  </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SafeWay Home Healthcare</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    min-height: 100vh;
+    font-family: 'Public Sans', system-ui, sans-serif;
+    color: #fff;
+  }
+  .page {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: clamp(20px, 3vw, 40px);
+    overflow: hidden;
+    background:
+      linear-gradient(90deg, rgba(254,88,140,0.80) 0%, rgba(96,38,158,0.80) 100%),
+      #741574 url('https://www.safewayhh.com/wp-content/uploads/2026/04/SAFEWAY.jpg') center / cover no-repeat;
+  }
+  .topbar {
+    position: relative;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .logo {
+    width: auto;
+    height: clamp(72px, 10vw, 110px);
+    display: block;
+  }
+  .env-tag {
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: #fff;
+    background: rgba(255,255,255,0.16);
+    border: 1px solid rgba(255,255,255,0.28);
+    padding: 6px 14px;
+    border-radius: 30px;
+  }
+  .content {
+    position: relative;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 0;
+  }
+  .hero { max-width: 640px; }
+  .hero h1 {
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 700;
+    line-height: 1.18;
+    margin: 0 0 16px;
+    text-shadow: 0 2px 12px rgba(60,20,70,0.35);
+  }
+  .hero p {
+    font-size: clamp(15px, 1.6vw, 18px);
+    font-weight: 400;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.92);
+    margin: 0 0 28px;
+    max-width: 560px;
+  }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 9px;
+    font-family: inherit; font-size: 16px; font-weight: 600;
+    padding: 13px 28px; border-radius: 10px; cursor: pointer;
+    text-decoration: none; border: none; transition: transform .12s, background .15s;
+  }
+  .btn-primary { background: #fff; color: #8B2AA6; }
+  .btn-primary:hover { background: #F3E9F6; transform: translateY(-1px); }
+  .btn-ghost {
+    background: rgba(255,255,255,0.12); color: #fff;
+    border: 1.5px solid rgba(255,255,255,0.55);
+  }
+  .btn-ghost:hover { background: rgba(255,255,255,0.22); }
+  .ms-logo { width: 18px; height: 18px; display: inline-block; }
+  .signin-note {
+    font-size: 13px; color: rgba(255,255,255,0.78); margin-top: 14px;
+  }
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 14px;
+    margin-top: 42px;
+  }
+  .feature {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 14px;
+    padding: 18px 18px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+  .feature .ico { font-size: 22px; margin-bottom: 8px; display: block; }
+  .feature h3 { font-size: 15.5px; font-weight: 600; margin: 0 0 5px; }
+  .feature p { font-size: 13px; font-weight: 400; line-height: 1.5; margin: 0; color: rgba(255,255,255,0.85); }
+  .footer {
+    position: relative;
+    flex: 0 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12.5px;
+    color: rgba(255,255,255,0.72);
+    margin-top: 18px;
+  }
+  .footer .links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+  .footer a { color: rgba(255,255,255,0.72); text-decoration: none; }
+  .footer a:hover { color: #fff; text-decoration: underline; }
+  .footer .secure { display: inline-flex; align-items: center; gap: 6px; }
+  @media (max-width: 620px){
+    .actions .btn { width: 100%; justify-content: center; }
+    .footer { justify-content: center; text-align: center; }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+
+    <div class="topbar">
+      <img class="logo" src="https://www.safewayhhc.com/wp-content/uploads/2023/03/logo-white-1.svg" alt="SafeWay Home Healthcare">
+      
+    </div>
+
+    <div class="content">
+      <div class="hero">
+        <h1>Your operational data, in one secure place</h1>
+        <p>
+          A modern, cloud-based platform that automatically brings together
+          SafeWay's operational and financial information &mdash; ready for
+          reporting, oversight, and everyday decisions.
+        </p>
+        <div class="actions">
+          <a href="#" class="btn btn-primary" onclick="return signIn()">
+            <svg class="ms-logo" viewBox="0 0 23 23" aria-hidden="true">
+              <rect width="10" height="10" x="1" y="1" fill="#F25022"/>
+              <rect width="10" height="10" x="12" y="1" fill="#7FBA00"/>
+              <rect width="10" height="10" x="1" y="12" fill="#00A4EF"/>
+              <rect width="10" height="10" x="12" y="12" fill="#FFB900"/>
+            </svg>
+            Sign in with Microsoft
+          </a>
+          
+        </div>
+        <div class="signin-note">Access is limited to authorised SafeWay Home Healthcare staff.</div>
+      </div>
+
+      <div class="features" id="learn">
+        <div class="feature">
+          <span class="ico">&#9729;</span>
+          <h3>Automated collection</h3>
+          <p>Operational and financial data gathered automatically every day &mdash; no manual exports.</p>
+        </div>
+        <div class="feature">
+          <span class="ico">&#128274;</span>
+          <h3>Secure by design</h3>
+          <p>Runs in Microsoft Azure with SafeWay sign-in and sensitive data protected throughout.</p>
+        </div>
+        <div class="feature">
+          <span class="ico">&#128202;</span>
+          <h3>Clear reporting</h3>
+          <p>Turns raw data into clear reports and dashboards for an up-to-date view of operations.</p>
+        </div>
+        <div class="feature">
+          <span class="ico">&#10003;</span>
+          <h3>One source of truth</h3>
+          <p>Everyone works from the same current, validated numbers.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <span class="secure">&#128274; Secured with Microsoft Azure &amp; Entra ID</span>
+      <div class="links">
+        <span>&copy; 2026 SafeWay Home Healthcare</span>
+        <a href="#terms">Terms of use</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#hipaa">HIPAA notice</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function signIn(){
+      alert("Sign-in will be enabled soon. This portal is currently being set up.");
+      return false;
+    }
+  </script>
+</body>
+</html>
